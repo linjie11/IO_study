@@ -29,6 +29,8 @@ public class ExceptionDemo {
             System.out.println(arr[3]);
         } catch (Exception e) {
             System.out.println("除数不能为0");
+        } finally {
+            System.out.println("finished");
         }
     }
 
