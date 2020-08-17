@@ -18,8 +18,20 @@ public class ExceptionDemo1 {
             e.printStackTrace();
         }
         System.out.println("处理异常之后");
+        method2();  //不需要处理
     }
 
+
+    /*运行期异常的抛出*/
+    private static void method2() throws ArithmeticException{
+        int a = 10;
+        int b = 0;
+        System.out.println(a/b);
+    }
+
+
+    /*编译期异常的抛出*/
+    //在方法声明上抛出，是为了告诉调用者，你注意了，我有问题
     public static void method() throws ParseException {
         String s = "2014-11-20--";
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
