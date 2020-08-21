@@ -1,13 +1,15 @@
 package com.linjie;
 
+import java.io.PrintStream;
 import java.io.UnsupportedEncodingException;
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 
 public class StringDemo {
     public static void main(String[] args) throws UnsupportedEncodingException {
-        String s = "你好";
+        String s = "hello";
         byte[] bys = s.getBytes();
+
         byte[] bys1 = s.getBytes("GBK");
         byte[] bys2 = s.getBytes("UTF-8");
         byte[] bys3 = s.getBytes("Unicode");
@@ -23,5 +25,6 @@ public class StringDemo {
         System.out.println("默认解码："+ss2);
         String ss3 = new String(bys,"UTF-8");
         System.out.println("UTF-8解码："+ss3);
+
     }
 }
